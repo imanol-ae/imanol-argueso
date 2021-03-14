@@ -4,10 +4,14 @@
  */
 
 /**
- * Import variables
+ * Import variables, functions and mixins
  */
 
 @import "variables";
+
+@import "functions";
+
+@import "mixins";
 
 /**
  * Import npm dependencies
@@ -20,11 +24,19 @@
 // @import "@some-company/some-node-module";
 
 /**
- * Import layouts
+ * Import base
+  */
+
+@import "base";
+
+/**
+ * Import components
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+@import "components/nav";
+@import "components/icons";
+@import "components/section-resume";
 
 /**
  * Do NOT include anything else in this file!

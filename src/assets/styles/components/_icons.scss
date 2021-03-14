@@ -1,0 +1,34 @@
+/* Estilos del iconos */
+
+/* Iconos de redes sociales de la sección "Sobre mí" */ 
+.social-media-icons {
+
+  .social-media-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: $light;
+    background-color: $social-icons;
+    border-radius: 100%;
+  }
+    
+  .social-media-icon:last-child {
+    margin-right: 0;
+  }
+  
+  .social-media-icon:hover {
+    text-decoration: none;
+    background-color: $corporate;
+  }
+}
+
+/* Iconos de herramientas y programación web de la sección "Conocimientos" */ 
+  
+.skills-icons {
+  font-size: 3rem;
+}
+  

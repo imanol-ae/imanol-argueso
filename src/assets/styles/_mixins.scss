@@ -1,0 +1,20 @@
+/* @mixins */
+
+@mixin color-transparency($transparency) {
+    color:rgba(255, 255, 255, $transparency);
+  }
+@mixin border-color-transparency($transparency) {
+    border-color:rgba(255, 255, 255, $transparency);
+}
+
+/* @extends */
+
+%margin-shared {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+%padding-shared {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+}
