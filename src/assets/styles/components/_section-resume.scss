@@ -49,12 +49,22 @@ hr {
   text-transform: uppercase; 
 }
 
+/* Lista de conocimientos */
+.skills-text {
+  display: block;
+  font-size: 35%;
+  line-height: .5;
+}
+
 /* Lista en la misma línea */
 .list-inline {
   padding-left: 0;
   list-style: none;
 }
 
-.list-inline-item { display: inline-block; }
+.list-inline-item { 
+  display: inline-block;
+  text-align: center; 
+}
 
 .list-inline-item:not(:last-child) { margin-right: .5rem; }
