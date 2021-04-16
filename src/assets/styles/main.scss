@@ -8,9 +8,7 @@
  */
 
 @import "variables";
-
 @import "functions";
-
 @import "mixins";
 
 /**
@@ -19,9 +17,8 @@
  * see commented examples below
  */
 
- @import "@fortawesome/fontawesome-free/css/all.css";
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "bootstrap/scss/bootstrap.scss";
 
 /**
  * Import base
@@ -33,10 +30,16 @@
  * Import components
  * It's a best practice to use a different partial for each page
  */
-
+@import "components/front";
 @import "components/nav";
+@import "components/footer";
+@import "components/members";
+@import "components/slider";
+@import "components/content";
 @import "components/icons";
-@import "components/section-resume";
+@import "components/lists";
+@import "components/card";
+@import "components/form";
 
 /**
  * Do NOT include anything else in this file!

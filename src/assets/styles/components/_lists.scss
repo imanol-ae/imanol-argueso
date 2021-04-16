@@ -1,0 +1,45 @@
+/* Estilos de las listas */ 
+
+.timeline {
+  li {
+    position: relative;
+    height: 3em;
+    color: $titles;
+
+    &:before {
+      position: absolute;
+      top: -.4em;
+      left: -11px;
+      z-index: -1;
+      display: inline-block;
+      width: 1px;
+      height: 3em;
+      padding: 0;
+      margin: 0;  
+      content: "";   
+      background: $titles;
+    }
+  }
+
+  &:before {
+    position: relative;
+    top: .1em;
+    left: -1em;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: $titles;
+    content: "●";
+  }
+
+  &:after {
+    position: relative;
+    top: -1em;
+    left: -1em;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: $titles;
+    content: "●";
+  }
+}

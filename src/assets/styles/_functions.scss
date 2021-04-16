@@ -1,9 +1,9 @@
-@function heading-font-size($heading-size){
+@function heading-font-size($heading-size) {
     @if ( $heading-size == 1 ) {
-      @return 4rem;
-    }@else if ( $heading-size == 2 ) {
       @return 3rem;
-    }@else{
+    } @else if ( $heading-size == 2 ) {
       @return 1.5rem;
+    } @else {
+      @return 1rem;
     }
-  }
+}

@@ -1,8 +1,6 @@
-/* Estilos del iconos */
+/* Iconos de redes sociales de la sección footer */ 
 
-/* Iconos de redes sociales de la sección "Sobre mí" */ 
 .social-media-icons {
-
   .social-media-icon {
     display: inline-flex;
     align-items: center;
@@ -14,21 +12,15 @@
     color: $light;
     background-color: $social-icons;
     border-radius: 100%;
-  }
-    
-  .social-media-icon:last-child {
-    margin-right: 0;
-  }
-  
-  .social-media-icon:hover {
-    text-decoration: none;
-    background-color: $corporate;
-  }
-}
 
-/* Iconos de herramientas y programación web de la sección "Conocimientos" */ 
-  
-.skills-icons {
-  font-size: 3rem;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $corporate;
+    }
+  }
 }
   

@@ -1,238 +1,117 @@
 /* Estilos del menú de navegación */ 
 
-.nav-link {
-  display: block;
-  padding: .5rem 1rem;
-
-  
-  &:hover, 
-  &:focus { text-decoration: none; }
-}
-  
-.navigation-name {
-  display: inline-block;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-  
-  &:hover, 
-  &:focus {
-    text-decoration: none;
-  }
-}
-  
-.navigation-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  
-  .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.navigation-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
-  
-.navigation-toggler {
-  padding: .25rem .75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  
-  &:hover, 
-  &:focus {
-    text-decoration: none;
-  }
-}
-  
-.navigation-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
-
-@media (min-width: 992px) {
-  .navigation-expand-big {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-
-    .navigation-nav {
-      flex-direction: row;
- 
-      .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem;
-      }
-    }
- 
-    .navigation-collapse {
-      display: flex;
-      flex-basis: auto;
-    }
-    .navigation-toggler {
-      display: none;
-    }
-  }
-}
-  
-.navigation-dark {
-  .navigation-name {
-    color: $light;
-  
-    &:hover, 
-    &:focus {
-      color: $light;
-    }
-  }
-  .navigation-nav {
-    .nav-link {
-      @include color-transparency(.5);
-  
-      &:hover,
-      &:focus {
-        @include color-transparency(1);
-      }
-    }
-
-    .active>.nav-link,
-    .nav-link.active,
-    .nav-link.show,
-    .show>.nav-link {
-      color: $light;
-      text-decoration: underline;
-    }
-  }
-  .navigation-toggler {
-    @include color-transparency(.5);
-    @include border-color-transparency(.3);
-  }
-  .navigation-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-.navigation {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: .5rem 1rem;
+nav { 
+  position: fixed; 
+  top: 0; 
+  z-index: 2;
+  width: 100%;
+  padding-top: 2px;
+  padding-right: 20px; 
   font-family: $font-family-menu;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, $corporate-nav-dark, $corporate-nav-light);
+  border-bottom: 1px $light solid;
+  
+  ul { list-style-type: none; } 
 
-  .navigation-nav {
-    .nav-item .nav-link {
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .05rem;
+  a { 
+    color: $light; 
+    text-decoration: none; 
+
+    &:hover { 
+      color: $primary;
+      text-decoration: none;
+      border-top: $links solid 1px;
+      border-bottom: $links solid 1px;
+    } 
+  } 
+}
+
+.logo a:hover { 
+  text-decoration: none; 
+  border-top: none;
+  border-bottom: none;
+} 
+.menu li { 
+  padding: 0 5px; 
+  font-size: 16px; 
+  white-space: nowrap; 
+} 
+.logo a, 
+.toggle a { 
+  font-size: 30px; 
+
+  &:hover {
+    border-top: none;
+    border-bottom: none;
+  }
+} 
+
+/* Mobile menu */ 
+.menu {
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  @media all and (min-width: 600px) { 
+    justify-content: center; 
+    margin-bottom: 1em;
+  }
+} 
+.toggle { 
+  order: 1; 
+} 
+.item.button { order: 2; } 
+
+.item { 
+  display: none; 
+  order: 3; 
+  width: 100%;
+  text-align: center; 
+} 
+.item.active { display: block; }
+
+/* Tablet menu */ 
+@media all and (min-width: 600px) { 
+  .logo { 
+    flex: 1; 
+  }
+
+  .item.button { 
+    display: block; 
+    order: 1; 
+    width: auto; 
+  } 
+
+  .toggle { 
+    flex: 1; 
+    order: 2; 
+    text-align: right; 
+
+    a:hover {
+      border-top: none;
+      border-bottom: none;
     }
-  }
-  .navigation-toggler:focus {
-    outline-color: $corporate-light;
-  }
+  } 
 }
+/* Desktop menu */ 
 
-@media (min-width: 992px) {
-  .navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    height: 100vh;
-    text-align: center;
-  
-    .navigation-name {
-      display: flex;
-      padding: .5rem;
-      margin-top: auto;
-      margin-right: auto;
-      margin-left: auto;     
-  
-      .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
-        border: .5rem solid;
-        @include border-color-transparency(.2);
-      }
-    }
-  
-    .navigation-collapse {
-      display: flex;
-      flex-grow: 0;
-      align-items: flex-start;
-      width: 100%;
-      margin-bottom: auto;
-        
-      .navigation-nav {
-        flex-direction: column;
-        width: 100%;
-  
-        .nav-item {
-          display: block;
-  
-          .nav-link {
-            display: block;
-          }
-        }
-      }
-    }
-  }
+@media all and (min-width: 900px) { 
+  .menu { 
+    margin-bottom: 0em;
+  } 
+  .item { 
+    display: block; 
+    order: 1;
+    width: auto;
+  } 
+
+  .toggle { display: none; } 
+  .logo { order: 0; } 
+  .button { order: 2; } 
+  .menu li { padding: 0 10px; } 
+  .menu .button { padding-right: 0; } 
 }
-@media (max-width: 992px) {
-  .navigation {
-    position: fixed;
-  }
-}
-
-/* Estilos del botón del menú responsive */
-button, [type="button"] { -webkit-appearance: button; }
-
-button {
-  margin: 0;
-  overflow: visible;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: $light;
-  text-transform: none;
-  border-radius: 0;
-}
-
-button::-moz-focus-inner, 
-[type="button"]::-moz-focus-inner { 
-  padding: 0;
-  border-style: none;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-button:not(:disabled), [type="button"]:not(:disabled) { cursor: pointer; }

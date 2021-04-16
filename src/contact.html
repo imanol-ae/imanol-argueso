@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Inicio del sitio web oficial de la Heavy UOC band">
+    <meta name="description" content="Contactar con la Heavy UOC band">
     <meta name="author" content="Heavy UOC band">
     <meta name="robots" content="noindex">
-    <title>Heavy UOC band</title>
+    <title>Contactar con la "Heavy UOC band"</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/styles/main.scss">
   </head>
@@ -18,24 +18,25 @@
         <li class="item"><a href="index.html">Inicio</a></li> 
         <li class="item"><a href="band-members.html">Sobre nosotros</a></li> 
         <li class="item"><a href="concerts.html">Conciertos</a></li> 
-        <li class="item"><a href="contact.html">Contacto</a></li> 
+        <li class="item"><a href="#">Contacto</a></li> 
         <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> 
       </ul> 
     </nav>
-    <main>
-      <div class="container-home">
-        <div class="item-home item1"></div>
-        <div class="item-home item2"></div>
-        <div class="item-home item3"></div>
-        <div class="item-home item4">
-          <h2>Próximo concierto</h2> 15 de junio, Palau San Jordi de Barcelona, 21h. Aforo limitado.
-        </div>
-        <div class="item-home item5"></div>
-        <div class="item-home item6"></div>
-        <div class="item-home item7"></div>
-        <div class="item-home item8">
-          <h1>Nos gusta el heavy</h1> Aunque disfrutamos convinando y expermentando con otros estilos musicales. Nos conocimos estudiando un máster de desarrollo de sitios y aplicaciones web en la <a href="https://www.uoc.edu" title="Sitio web de la Universidad Oberta de Catalunya">Universidad Oberta de Catalunya</a>, pero es la música nuestra verdadera pasión.
-        </div>
+    <main class="contact-form">
+      <h1>Contacta con "Heavy UOC band"</h1>
+      <div class="contact-form-fields">
+        <form data-netlify="true" >
+          <div class="form-group">
+            <label for="exampleInputEmail1">Correo electrónico:</label>
+            <input class="form-control" id="exampleInputEmail1" type="email" placeholder="Introduce tu email" aria-describedby="emailHelp">
+            <small class="form-text text-muted" id="emailHelp">No compartiremos tu email con nadie.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Mensaje:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
       </div>
     </main>
     <footer>

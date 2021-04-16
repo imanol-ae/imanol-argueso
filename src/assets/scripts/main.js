@@ -1,37 +1,13 @@
-    (function ($) {
-    "use strict"; // Start of use strict
+import * as bootstrap from 'bootstrap';
 
-    // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
-                return false;
-            }
-        }
-    });
-
-    // Closes responsive menu when a scroll trigger link is clicked
-    $(".js-scroll-trigger").click(function () {
-        $(".navigation-collapse").collapse("hide");
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $("body").scrollspy({
-        target: "#sideNav",
-    });
-})(jQuery); // End of use strict
+$(function() { 
+    $(".toggle").on("click", function() { 
+        if ($(".item").hasClass("active")) { 
+            $(".item").removeClass("active"); 
+            $(this).find("a").html("<i class='fas fa-bars'></i>"); 
+        } else { 
+            $(".item").addClass("active"); 
+            $(this).find("a").html("<i class='fas fa-times'></i>"); 
+        } 
+    }); 
+});

@@ -1,0 +1,23 @@
+/* Estilos del slider */ 
+
+.carousel {
+  margin-top: 6.4em;
+
+  .carousel-item {
+    height: 500px;
+  
+    @media all and (max-width: 700px) { 
+      height: 300px;
+      margin-top: 1em;
+    }
+  }
+  
+  .carousel-caption {
+    color: $light;
+    background-color: $corporate-nav-dark;
+    border-radius: $border-radius; 
+    opacity: .8;
+   
+    h3 { color: $light; }
+  }
+}

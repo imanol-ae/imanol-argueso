@@ -1,0 +1,76 @@
+/* Estilos del componenete de miembros del grupo */ 
+
+.band-members {
+  float: left;
+  width: 100%;
+  min-height: 700px;
+  margin-top: 6em;
+  text-align: center;
+  background-image: url("/src/assets/images/concert.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+
+  @media all and (max-width: 700px) { 
+    margin-top: 7.3em;
+  }
+
+  h1 {
+    width: auto;
+    margin-top: 1em;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    color: $light;
+  }
+
+    @media all and (max-width: 930px) { 
+        h2 {
+            color: $light;
+        }
+      }
+}
+
+.container-band-members { 
+    display: flex; 
+    flex-direction: row;
+    align-content: center;
+    align-items: stretch; 
+    justify-content: space-around; 
+    padding-right: 2em;
+    padding-left: 2em;
+    margin-bottom: 3em;
+
+    @media all and (max-width: 930px) {
+        flex-direction: column;
+        margin-top: 17em;
+    }
+    
+    img {
+      width: 300px;
+      height: 300px;
+      margin-right: auto;
+      margin-left: auto;
+      border: .5rem solid hsla(0,0%,100%,.2);
+      border-radius: 150px;
+    }
+ }
+
+ .item-member {
+    flex: 1 1 0;
+    align-content: space-around;
+    text-align: center
+ }
+
+ .item-member-box {
+    @include container-transparency(.8);
+    padding: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+    text-align: center;
+
+    @media all and (max-width: 930px) {
+      color: $light;
+      background-color: $corporate-nav-dark;
+      opacity: 1;
+    }
+ }

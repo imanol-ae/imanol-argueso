@@ -1,17 +1,45 @@
 @use "sass:color";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Quicksand:wght@500&family=Titillium+Web:wght@600&display=swap");
 
+/* Fonts */
 $font-family: "Quicksand", sans-serif;
 $font-family-titles: "Titillium Web", sans-serif;
 $font-family-menu: "Open Sans", sans-serif;
 
+/* Colors */
 $corporate: #0b6c0e;
-$corporate-dark: #197e05;
-$corporate-light: #4ed434;
+$corporate-nav-dark: #923a31;
+$corporate-nav-light: #e03d34;
+$green-dark: #197e05;
+$green-light: #4ed434;
 $titles: #343a40;
 $text-light: #565b5f;
 $social-icons: #495057;
 $light: #fff;
-$items: #ffc107;
+$yellow: #ffc107;
 $base-color: rgba(255, 255, 255);
+$links: rgb(64, 64, 177);
+$links-dark: rgb(33, 33, 104);
+$black: #0000;
 
+/* Border-radius */
+$border-radius: 5px !default;
+
+
+/* Carusel */
+$carousel-control-width: 15%;
+$carousel-control-opacity: .7;
+$carousel-control-hover-opacity: .9;
+$carousel-indicator-height: 8px;
+
+/* Acordion */
+$accordion-button-active-bg: $corporate-nav-light;
+$accordion-button-active-color: $light;
+
+/* Form */
+$input-color: $titles;
+
+/* Card */
+$card-cap-bg: $corporate-nav-light;
+$card-border-color: $titles;
+$card-cap-color: $light;
