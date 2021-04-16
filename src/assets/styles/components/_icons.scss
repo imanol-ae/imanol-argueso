@@ -1,26 +1,22 @@
 /* Iconos de redes sociales de la sección footer */ 
 
-.social-media-icons {
-  .social-media-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-right: 1.5rem;
-    font-size: 1.5rem;
-    color: $light;
-    background-color: $social-icons;
-    border-radius: 100%;
+.social-media-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  color: $light;
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    &:hover {
-      text-decoration: none;
-      background-color: $corporate;
-    }
+  &:hover {
+    text-decoration: none;
+    color: $links;
   }
 }
+
+.item-footer4 .social-media-icon:hover { border: none;}
   

@@ -1,6 +1,6 @@
 /* Estilos del menú de navegación */ 
 
-nav { 
+.navigation { 
   position: fixed; 
   top: 0; 
   z-index: 2;
@@ -11,21 +11,21 @@ nav {
   text-transform: uppercase;
   background-image: linear-gradient(to right, $corporate-nav-dark, $corporate-nav-light);
   border-bottom: 1px $light solid;
-  
-  ul { list-style-type: none; } 
-
-  a { 
-    color: $light; 
-    text-decoration: none; 
-
-    &:hover { 
-      color: $primary;
-      text-decoration: none;
-      border-top: $links solid 1px;
-      border-bottom: $links solid 1px;
-    } 
-  } 
 }
+
+.navigation ul { list-style-type: none; } 
+
+.navigation a { 
+  color: $light; 
+  text-decoration: none; 
+
+  &:hover { 
+    color: $primary;
+    text-decoration: none;
+    border-top: $links solid 1px;
+    border-bottom: $links solid 1px;
+  } 
+} 
 
 .logo a:hover { 
   text-decoration: none; 
@@ -64,6 +64,7 @@ nav {
 .toggle { 
   order: 1; 
 } 
+
 .item.button { order: 2; } 
 
 .item { 
@@ -72,6 +73,7 @@ nav {
   width: 100%;
   text-align: center; 
 } 
+
 .item.active { display: block; }
 
 /* Tablet menu */ 

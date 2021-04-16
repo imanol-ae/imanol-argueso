@@ -1,16 +1,26 @@
 /* Estilos del pie de página del sitio web */ 
 
-footer { 
+.footer { 
   float: left;
   width: 100%;
   padding-top: 2px;
   padding-right: 20px;
   background-image: linear-gradient(to right, $corporate-nav-light, $corporate-nav-dark);
   border-top: 1px $light solid;
-    
-  ul { list-style-type: none; } 
-  
-  a { 
+}   
+
+.foot { 
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-between;
+  list-style-type: none; 
+  padding-bottom: 1em;
+  margin-top: 0;
+} 
+
+.foot a { 
     color: $light; 
     text-decoration: none; 
 
@@ -20,32 +30,23 @@ footer {
       border-top: $links solid 1px;
       border-bottom: $links solid 1px;
     } 
-  } 
+} 
 
-  .foot { 
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding-bottom: 1em;
-    margin-top: 0;
-  } 
-  .logo {
-    flex: 0;
-  }
-
-  .item-footer4 a {
-    margin-right: 1em;
-    margin-left: 1em;
-    font-size: 160%;
-    text-decoration: none;
-    border-top: none;
-    border-bottom: none;
-  }
+.foot .logo {
+  flex: 0;
 }
+
+.item-footer4 a {
+  margin-right: 1em;
+  margin-left: 1em;
+  font-size: 160%;
+  text-decoration: none;
+  border-top: none;
+  border-bottom: none;
+}
+
 @supports (display: grid) {
-  footer { 
+  .footer { 
     display: grid;
     grid-template-columns: 1fr;
   }
