@@ -21,19 +21,23 @@
 } 
 
 .foot a { 
-    color: $light; 
-    text-decoration: none; 
+  color: $light; 
+  text-decoration: none; 
 
-    &:hover { 
-      color: $primary; 
-      text-decoration: none;
-      border-top: $links solid 1px;
-      border-bottom: $links solid 1px;
-    } 
+  &:hover { 
+    color: $primary; 
+    text-decoration: none;
+    border-top: $links solid 1px;
+    border-bottom: $links solid 1px;
+  } 
 } 
 
 .foot .logo {
   flex: 0;
+
+  a:hover { 
+    border: none;
+  } 
 }
 
 .item-footer4 a {
